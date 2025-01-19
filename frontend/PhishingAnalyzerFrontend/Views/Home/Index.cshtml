@@ -1,0 +1,34 @@
+﻿@using PhishingAnalyzerFrontend.Models
+@{
+    ViewData["Title"] = "Phishing Analyzer";
+}
+
+<h1>Phishing Analyzer</h1>
+<p>Enter a URL to check for phishing risks:</p>
+
+<form method="post" action="/Home/AnalyzeUrl">
+    <input type="text" name="url" placeholder="Enter a URL" required style="width: 400px; padding: 8px;" />
+    <button type="submit" style="padding: 8px 16px;">Analyze</button>
+</form>
+
+@if (ViewBag.AnalysisResult != null)
+{
+    var analysisResult = ViewBag.AnalysisResult as AnalysisResult;
+
+    if (analysisResult != null)
+    {
+        <h2>Analysis Result</h2>
+        <p><strong>URL:</strong> @analysisResult.Url</p>
+        <p><strong>Risk Score:</strong> @analysisResult.RiskScore</p>
+        <ul>
+            @foreach (var reason in (analysisResult.Reasons ?? new List<string>()))
+            {
+                <li>@reason</li>
+            }
+        </ul>
+    }
+}
+else
+{
+    <p>No analysis result available yet.</p>
+}
