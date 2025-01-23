@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhishingAnalyzerFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24aeb97214fceaaaf8f9d9e4ae0c16c4beebf900")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc5e0327c2e606ea3d49ff53395957f514e22cc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhishingAnalyzerFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhishingAnalyzerFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,6 +13,10 @@ from urllib.parse import urlparse, unquote
 from Levenshtein import distance as levenshtein_distance
 import validators
 from dotenv import load_dotenv
+import logging
+from logging.handlers import RotatingFileHandler
+from bs4 import BeautifulSoup
+import tldextract
 
 # Load environment variables
 load_dotenv()
@@ -20,6 +24,15 @@ load_dotenv()
 # Global Configurations
 app = Flask(__name__)
 CORS(app)  # Enables cross-origin requests
+
+logging.basicConfig(
+    level=logging.DEBUG, # Set logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        RotatingFileHandler("phishing_analyzer.log", maxBytes=5*1024*1024, backupCount=3),  # 5MB per file, 3 backups
+        logging.StreamHandler() #prints logs to the console
+    ]
+)
 
 SAFE_BROWSING_API_KEY = os.getenv("API_KEY")
 if not SAFE_BROWSING_API_KEY:
@@ -58,9 +71,10 @@ def fetch_tranco_list():
 
 def check_google_safe_browsing(url):
     """Check the URL against Google Safe Browsing."""
+    logging.info(f"Checking URL against Google Safe Browsing: {url}")
     payload = {
         "client": {
-            "clientId": "yourapp",
+            "clientId": "phishing_analyzer",
             "clientVersion": "1.0.0"
         },
         "threatInfo": {
@@ -76,18 +90,145 @@ def check_google_safe_browsing(url):
             json=payload
         )
         data = response.json()
+        logging.debug(f"Google Safe Browsing response for {url}: {data}")
         return "matches" in data
     except requests.RequestException as e:
-        print(f"Error contacting Google Safe Browsing API: {e}")
+        logging.error(f"Error contacting Google Safe Browsing API for {url}: {e}")
         return False
 
 def check_domain_similarity(domain, trusted_domains):
     """Check if the domain is similar to any trusted domain."""
     for trusted in trusted_domains:
+        if domain == trusted:  # Skip self-comparison
+            continue
         max_distance = max(len(domain), len(trusted)) * 0.2  # Allow up to 20% difference
         if levenshtein_distance(domain, trusted) <= max_distance:
             return trusted
     return None
+
+def analyze_redirect_chain(url):
+        logging.info(f"Starting redirect chain analysis for URL: {url}")
+        try:
+            # Track visited URLs
+            visited_urls = []
+
+            # Make the request and follow redirects
+            response = requests.get(url, timeout=10, allow_redirects=True)
+
+            # Extract the chain (of URLs)
+            for history in response.history:
+                visited_urls.append(history.url)
+                logging.debug(f"Redirected to: {history.url}")
+
+            # Add the final URL
+            final_url = response.url
+            visited_urls.append(final_url)
+            logging.info(f"Final URL after redirects: {final_url}")
+
+            # Analysis
+            is_suspicious = len(visited_urls) > 5  # Adjust threshold as needed
+            reason = "Excessive redirects detected." if is_suspicious else "Redirect chain looks normal."
+            
+            return {
+                "is_suspicious": is_suspicious,
+                "reason": reason,
+                "chain": visited_urls,
+                "final_url": final_url
+            }
+        except requests.RequestException as e:
+            print(f"Error during redirect analysis: {e}")
+            return {
+                "is_suspicious": True,
+                "reason": "Error fetching URL during redirect analysis",
+                "chain": [],
+                "final_url": None
+            }
+        
+import tldextract
+
+def get_base_domain(domain):
+    """Extract the base domain from a full domain."""
+    ext = tldextract.extract(domain)
+    return f"{ext.domain}.{ext.suffix}"  # e.g., "google.com" from "mail.google.com"
+        
+def analyze_links(soup, current_domain):
+    """Analyze links to detect clearly suspicious behavior."""
+    analysis_results = []
+    links = soup.find_all('a', href=True)
+
+    for link in links:
+        link_text = link.text.strip().lower()
+        href = link['href'].strip().lower()
+
+        # Ignore links without meaningful text or href
+        if not link_text or not href:
+            continue
+
+        # Skip internal anchors and utility links
+        if href.startswith('#') or any(phrase in link_text for phrase in [
+            "privacy policy", "terms of use", "accessibility", "skip to content"
+        ]):
+            continue
+
+        # Extract domains for comparison
+        parsed_href = urlparse(href)
+        href_domain = parsed_href.netloc
+        current_base_domain = get_base_domain(current_domain)
+        href_base_domain = get_base_domain(href_domain)
+
+        # Flag links where text suggests one domain but points to another
+        if href_domain and href_base_domain != current_base_domain and link_text in current_base_domain:
+            analysis_results.append(f"Suspicious link: text '{link_text}' points to unrelated domain '{href_domain}'.")
+
+        # Flag obfuscated links (e.g., with encoded characters)
+        if re.search(r"%[0-9A-Fa-f]{2}", href) or re.match(r"(\d{1,3}\.){3}\d{1,3}", href_domain):
+            analysis_results.append(f"Obfuscated or suspicious link: '{href}'.")
+
+    return analysis_results
+
+def analyze_forms(soup, current_domain):
+    """Analyze forms to detect phishing attempts."""
+    analysis_results = []
+    forms = soup.find_all('form')
+
+    for form in forms:
+        action = form.get('action', '').strip().lower()
+        if action:
+            parsed_action = urlparse(action)
+            action_domain = parsed_action.netloc
+
+            # Flag forms submitting to external domains
+            if action_domain and action_domain != current_domain:
+                analysis_results.append(f"Form submitting to external domain: '{action}'.")
+    return analysis_results
+
+def analyze_html_content(url):
+    """Fetch and analyze the HTML content of a URL for phishing indicators."""
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.text, 'lxml')
+        analysis_results = []
+
+        # Extract current domain
+        current_domain = urlparse(url).netloc
+
+        # Analyze links and forms
+        link_issues = analyze_links(soup, current_domain)
+        form_issues = analyze_forms(soup, current_domain)
+
+        # Combine results
+        analysis_results.extend(link_issues)
+        analysis_results.extend(form_issues)
+
+        return analysis_results
+    except requests.RequestException as e:
+        logging.error(f"Error fetching HTML content for {url}: {e}")
+        return [f"Error fetching HTML content: {str(e)}"]
+    except Exception as e:
+        logging.error(f"Error analyzing HTML content for {url}: {e}")
+        return [f"Error analyzing HTML content: {str(e)}"]
 
 # Scheduler Logic
 def update_trusted_domains():
@@ -111,20 +252,21 @@ TRUSTED_DOMAINS = fetch_tranco_list()
 
 
 # Flask Application Logic
-@app.route('/analyze_url', methods=['POST'])
+@app.route('/analyze_url', methods=['GET', 'POST'])
 def analyze_url():
     """Analyze a URL for phishing indicators."""
     data = request.get_json()
     url = data.get("url", "")
+    logging.info(f"Received request to analyze URL: {url}")
 
-    # Form checks
+    # Validate input
     if not url:
+        logging.warning("No URL provided in the request.")
         return jsonify({"error": "No URL provided"}), 400
-
     if not validators.url(url):
+        logging.warning(f"Invalid URL format: {url}")
         return jsonify({"error": "Invalid URL format"}), 400
 
-    # Starter phishing detection logic
     risk_score = 0
     reasons = []
 
@@ -133,18 +275,18 @@ def analyze_url():
     parsed_url = urlparse(decoded_url)
     domain = parsed_url.netloc.lower()
 
-    # 1. Check for common phishing keywords
+    # 1. Common Phishing Keywords
     keywords = ['login', 'secure', 'account', 'verify', 'bank']
     if any(keyword in decoded_url.lower() for keyword in keywords):
         risk_score += 50
         reasons.append("Contains sketchy keyword(s) commonly used in phishing URLs.")
 
-    # 2. Detect obfuscated characters
+    # 2. Obfuscated Characters
     if re.search(r"%[0-9A-Fa-f]{2}", url):
         risk_score += 30
         reasons.append("URL contains encoded characters that may hide intent.")
 
-    # 3. Suspicious subdomains
+    # 3. Suspicious Subdomains
     if parsed_url.netloc.count('.') > 2:
         risk_score += 40
         reasons.append("Excessive subdomains detected.")
@@ -155,23 +297,39 @@ def analyze_url():
         risk_score += 30
         reasons.append("Suspicious TLD detected.")
 
-    # 5. Check for IP address instead of domain name
+    # 5. IP Address Instead of Domain Name
     if re.match(r"(\d{1,3}\.){3}\d{1,3}", parsed_url.netloc):
         risk_score += 50
         reasons.append("Domain uses an IP address instead of a name.")
 
-    # 6. Google Safe Browsing Check
-    if check_google_safe_browsing(decoded_url):
-        risk_score += 100
-        reasons.append("URL is flagged as unsafe by Google Safe Browsing.")
+    # 6. Redirect Chain Analysis
+    redirect_analysis = analyze_redirect_chain(decoded_url)
+    if redirect_analysis["is_suspicious"]:
+        risk_score += 50
+        reasons.append(redirect_analysis["reason"])
+        reasons.append(f"Redirect chain: {' -> '.join(redirect_analysis['chain'])}")
 
-    # 7. Typosquat check
-    print(f"Trusted domains: {TRUSTED_DOMAINS[:10]}")  # Print the first 10 domains
-    similar_domain = check_domain_similarity(domain, TRUSTED_DOMAINS)
-    if similar_domain:
-        risk_score += 70
-        reasons.append(f"Domain {domain} is visually similar to trusted domain {similar_domain}.")
+    final_url = redirect_analysis["final_url"]
+    if final_url:
+        # 7. Google Safe Browsing Check (for final URL)
+        if check_google_safe_browsing(final_url):
+            risk_score += 100
+            reasons.append("Final URL is flagged as unsafe by Google Safe Browsing.")
 
+        # 8. Domain Similarity Check (for final domain)
+        final_domain = urlparse(final_url).netloc.lower()
+        similar_domain = check_domain_similarity(final_domain, TRUSTED_DOMAINS)
+        if similar_domain:
+            risk_score += 70
+            reasons.append(f"Final domain {final_domain} is visually similar to trusted domain {similar_domain}.")
+
+    # 9. Content-Based Analysis (HTML-specific checks)
+    html_analysis = analyze_html_content(decoded_url)
+    if html_analysis:
+        risk_score += 50
+        reasons.extend(html_analysis)
+
+    logging.info(f"Analysis completed for URL: {url}")
     return jsonify({
         "url": url,
         "risk_score": risk_score,
