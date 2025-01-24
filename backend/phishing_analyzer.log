@@ -424,3 +424,345 @@
 2025-01-23 13:18:31,468 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
 2025-01-23 13:18:31,488 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
 2025-01-23 13:18:31,489 - INFO - 127.0.0.1 - - [23/Jan/2025 13:18:31] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 21:10:53,844 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:10:54,692 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:10:54,846 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:10:55,928 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:10:55,930 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:10:55,932 - INFO -  * Restarting with stat
+2025-01-23 21:10:56,348 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:10:56,586 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:10:56,627 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:10:57,697 - WARNING -  * Debugger is active!
+2025-01-23 21:10:57,701 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 21:13:19,567 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:13:19,810 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:13:19,852 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:13:20,994 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:13:20,994 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:13:20,996 - INFO -  * Restarting with stat
+2025-01-23 21:13:21,456 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:13:21,687 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:13:21,722 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:13:22,733 - WARNING -  * Debugger is active!
+2025-01-23 21:13:22,736 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 21:17:56,232 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:17:56,693 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:17:56,733 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:17:57,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:17:57,789 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:17:57,791 - INFO -  * Restarting with stat
+2025-01-23 21:17:58,221 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:17:58,443 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:17:58,476 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:17:59,539 - WARNING -  * Debugger is active!
+2025-01-23 21:17:59,542 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 21:25:29,055 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:25:29,338 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:25:29,370 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:25:30,478 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:25:30,479 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:25:30,481 - INFO -  * Restarting with stat
+2025-01-23 21:25:30,898 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:25:31,127 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:25:31,170 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:25:32,217 - WARNING -  * Debugger is active!
+2025-01-23 21:25:32,220 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 21:38:42,545 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:38:42,870 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:38:42,900 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:38:44,154 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:38:44,155 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:38:44,157 - INFO -  * Restarting with stat
+2025-01-23 21:38:44,684 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 21:38:44,889 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 21:38:44,928 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 21:38:46,208 - WARNING -  * Debugger is active!
+2025-01-23 21:38:46,214 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 21:47:52,234 - INFO - Received request to analyze URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 21:47:52,242 - INFO - Starting redirect chain analysis for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 21:47:52,244 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 21:47:52,315 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 154
+2025-01-23 21:47:52,318 - INFO - Final URL after redirects: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 21:47:52,320 - INFO - Checking URL against Google Safe Browsing: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 21:47:52,323 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 21:47:52,386 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 261
+2025-01-23 21:47:52,387 - DEBUG - Google Safe Browsing response for http://testsafebrowsing.appspot.com/s/malware.html: {'matches': [{'threatType': 'MALWARE', 'platformType': 'ANY_PLATFORM', 'threat': {'url': 'http://testsafebrowsing.appspot.com/s/malware.html'}, 'cacheDuration': '300s', 'threatEntryType': 'URL'}]}
+2025-01-23 21:47:52,391 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 21:47:52,438 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 154
+2025-01-23 21:47:52,441 - DEBUG - Attempting to acquire lock 2096656098688 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 21:47:52,442 - DEBUG - Lock 2096656098688 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 21:47:52,457 - DEBUG - Attempting to release lock 2096656098688 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 21:47:52,458 - DEBUG - Lock 2096656098688 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 21:47:52,492 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 21:47:52,493 - INFO - 127.0.0.1 - - [23/Jan/2025 21:47:52] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:05:44,990 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:05:45,811 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:05:45,850 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:05:46,970 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:05:46,970 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:05:46,972 - INFO -  * Restarting with stat
+2025-01-23 22:05:47,397 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:05:47,648 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:05:47,697 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:05:48,745 - WARNING -  * Debugger is active!
+2025-01-23 22:05:48,748 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:08:22,968 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:08:23,229 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:08:23,272 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:08:24,412 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:08:24,413 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:08:24,414 - INFO -  * Restarting with stat
+2025-01-23 22:08:24,851 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:08:25,064 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:08:25,096 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:08:26,188 - WARNING -  * Debugger is active!
+2025-01-23 22:08:26,191 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:11:06,746 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:11:07,472 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:11:07,516 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:11:08,586 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:11:08,586 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:11:08,588 - INFO -  * Restarting with stat
+2025-01-23 22:11:09,000 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:11:09,234 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:11:09,275 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:11:10,348 - WARNING -  * Debugger is active!
+2025-01-23 22:11:10,352 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:12:44,853 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:12:45,202 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:12:45,232 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:12:46,342 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:12:46,343 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:12:46,345 - INFO -  * Restarting with stat
+2025-01-23 22:12:46,798 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:12:47,027 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:12:47,069 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:12:48,179 - WARNING -  * Debugger is active!
+2025-01-23 22:12:48,182 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:13:48,927 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:13:49,220 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:13:49,248 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:13:50,405 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:13:50,405 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:13:50,408 - INFO -  * Restarting with stat
+2025-01-23 22:13:50,847 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:13:51,069 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:13:51,100 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:13:52,239 - WARNING -  * Debugger is active!
+2025-01-23 22:13:52,243 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:15:57,547 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:15:57,944 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:15:57,983 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:15:59,205 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:15:59,205 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:15:59,207 - INFO -  * Restarting with stat
+2025-01-23 22:15:59,743 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:15:59,957 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:15:59,985 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:16:01,256 - WARNING -  * Debugger is active!
+2025-01-23 22:16:01,260 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:16:44,580 - INFO - Received request to analyze URL: http://example.com/login
+2025-01-23 22:16:44,587 - INFO - Starting redirect chain analysis for URL: http://example.com/login
+2025-01-23 22:16:44,588 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 22:16:44,945 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 22:16:44,947 - INFO - Final URL after redirects: http://example.com/login
+2025-01-23 22:16:44,948 - INFO - Checking URL against Google Safe Browsing: http://example.com/login
+2025-01-23 22:16:44,951 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:16:45,016 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:16:45,017 - DEBUG - Google Safe Browsing response for http://example.com/login: {}
+2025-01-23 22:16:45,019 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 22:16:45,161 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 22:16:45,162 - ERROR - Error fetching HTML content for http://example.com/login: 404 Client Error: Not Found for url: http://example.com/login
+2025-01-23 22:16:45,164 - INFO - Analysis completed for URL: http://example.com/login
+2025-01-23 22:16:45,165 - INFO - 127.0.0.1 - - [23/Jan/2025 22:16:45] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:21:56,766 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:21:57,127 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:21:57,165 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:21:58,180 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:21:58,181 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:21:58,184 - INFO -  * Restarting with stat
+2025-01-23 22:21:58,615 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:21:58,840 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:21:58,869 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:21:59,951 - WARNING -  * Debugger is active!
+2025-01-23 22:21:59,954 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:22:04,658 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:22:04,664 - INFO - Starting redirect chain analysis for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:22:04,666 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:22:06,210 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:22:06,216 - INFO - Final URL after redirects: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:22:06,218 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:22:06,221 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:22:06,324 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:22:06,326 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-23 22:22:06,329 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:22:07,808 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:22:07,828 - DEBUG - Attempting to acquire lock 1926858474640 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:22:07,830 - DEBUG - Lock 1926858474640 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:22:07,831 - DEBUG - Attempting to release lock 1926858474640 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:22:07,832 - DEBUG - Lock 1926858474640 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:22:07,854 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:22:07,855 - INFO - 127.0.0.1 - - [23/Jan/2025 22:22:07] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:26:17,132 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:26:17,382 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:26:17,409 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:26:18,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:26:18,507 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:26:18,508 - INFO -  * Restarting with stat
+2025-01-23 22:26:18,923 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:26:19,124 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:26:19,152 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:26:20,169 - WARNING -  * Debugger is active!
+2025-01-23 22:26:20,172 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:29:37,871 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:29:38,282 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:29:38,324 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:29:39,401 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:29:39,402 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:29:39,403 - INFO -  * Restarting with stat
+2025-01-23 22:29:39,810 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:29:40,057 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:29:40,094 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:29:41,150 - WARNING -  * Debugger is active!
+2025-01-23 22:29:41,153 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:29:55,741 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:29:55,750 - INFO - Starting redirect chain analysis for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:29:55,752 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:29:57,346 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:29:57,350 - INFO - Final URL after redirects: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:29:57,352 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:29:57,354 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:29:57,427 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:29:57,429 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-23 22:29:57,432 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:29:58,889 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:29:58,921 - DEBUG - Attempting to acquire lock 2013969314816 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:29:58,922 - DEBUG - Lock 2013969314816 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:29:58,924 - DEBUG - Attempting to release lock 2013969314816 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:29:58,924 - DEBUG - Lock 2013969314816 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:29:58,948 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:29:58,950 - INFO - 127.0.0.1 - - [23/Jan/2025 22:29:58] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:30:03,340 - INFO - Received request to analyze URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:30:03,341 - INFO - Starting redirect chain analysis for URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:30:03,343 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 22:30:03,831 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 22:30:03,961 - INFO - Final URL after redirects: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:30:03,963 - INFO - Checking URL against Google Safe Browsing: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:30:03,965 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:30:04,015 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:30:04,016 - DEBUG - Google Safe Browsing response for https://amazon.jobs/content/en/our-workplace/leadership-principles: {}
+2025-01-23 22:30:04,018 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 22:30:04,244 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 22:30:04,353 - INFO - Analysis completed for URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:30:04,354 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:04] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:30:14,644 - INFO - Received request to analyze URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:30:14,644 - INFO - Starting redirect chain analysis for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:30:14,647 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 22:30:14,730 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 154
+2025-01-23 22:30:14,732 - INFO - Final URL after redirects: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:30:14,733 - INFO - Checking URL against Google Safe Browsing: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:30:14,735 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:30:14,778 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 261
+2025-01-23 22:30:14,779 - DEBUG - Google Safe Browsing response for http://testsafebrowsing.appspot.com/s/malware.html: {'matches': [{'threatType': 'MALWARE', 'platformType': 'ANY_PLATFORM', 'threat': {'url': 'http://testsafebrowsing.appspot.com/s/malware.html'}, 'cacheDuration': '300s', 'threatEntryType': 'URL'}]}
+2025-01-23 22:30:14,782 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 22:30:14,810 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 154
+2025-01-23 22:30:14,812 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:30:14,814 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:14] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:30:51,455 - INFO - Received request to analyze URL: http://g00gle.com
+2025-01-23 22:30:51,456 - INFO - Starting redirect chain analysis for URL: http://g00gle.com
+2025-01-23 22:30:51,458 - DEBUG - Starting new HTTP connection (1): g00gle.com:80
+2025-01-23 22:30:51,593 - DEBUG - Starting new HTTP connection (1): g00gle.com:80
+2025-01-23 22:30:51,594 - ERROR - Error fetching HTML content for http://g00gle.com: HTTPConnectionPool(host='g00gle.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001D4E9AAF550>: Failed to resolve 'g00gle.com' ([Errno 11001] getaddrinfo failed)"))
+2025-01-23 22:30:51,594 - INFO - Analysis completed for URL: http://g00gle.com
+2025-01-23 22:30:51,595 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:51] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:36:44,820 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:36:45,657 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:36:45,810 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:36:46,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:36:46,918 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:36:46,920 - INFO -  * Restarting with stat
+2025-01-23 22:36:47,324 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:36:47,556 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:36:47,585 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:36:48,703 - WARNING -  * Debugger is active!
+2025-01-23 22:36:48,709 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:37:27,078 - INFO - 127.0.0.1 - - [23/Jan/2025 22:37:27] "[35m[1mPOST /analyze_url HTTP/1.1[0m" 500 -
+2025-01-23 22:49:33,132 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:49:33,857 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:49:33,899 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:49:34,995 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:49:34,997 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:49:34,999 - INFO -  * Restarting with stat
+2025-01-23 22:49:35,400 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 22:49:35,625 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 22:49:35,655 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 22:49:36,725 - WARNING -  * Debugger is active!
+2025-01-23 22:49:36,728 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 22:50:02,390 - INFO - Received request to analyze URL: http://g00gle.com
+2025-01-23 22:50:02,437 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:02] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:50:07,700 - INFO - Received request to analyze URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:50:07,718 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 22:50:08,159 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 22:50:08,246 - INFO - Checking URL against Google Safe Browsing: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:50:08,249 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:50:08,335 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:50:08,336 - DEBUG - Google Safe Browsing response for https://amazon.jobs/content/en/our-workplace/leadership-principles: {}
+2025-01-23 22:50:08,338 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 22:50:08,563 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 22:50:08,703 - DEBUG - Attempting to acquire lock 2275225442912 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:50:08,705 - DEBUG - Lock 2275225442912 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:50:08,706 - DEBUG - Attempting to release lock 2275225442912 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:50:08,707 - DEBUG - Lock 2275225442912 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 22:50:08,732 - INFO - Analysis completed for URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 22:50:08,733 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:08] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:50:12,316 - INFO - Received request to analyze URL: http://example.com/login
+2025-01-23 22:50:12,329 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 22:50:13,821 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 22:50:13,823 - INFO - Checking URL against Google Safe Browsing: http://example.com/login
+2025-01-23 22:50:13,825 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:50:13,882 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:50:13,884 - DEBUG - Google Safe Browsing response for http://example.com/login: {}
+2025-01-23 22:50:13,890 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 22:50:13,979 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 22:50:13,980 - ERROR - Error fetching HTML content for http://example.com/login: 404 Client Error: Not Found for url: http://example.com/login
+2025-01-23 22:50:13,981 - INFO - Analysis completed for URL: http://example.com/login
+2025-01-23 22:50:13,982 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:13] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:50:24,931 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:50:24,954 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:50:26,877 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:50:26,879 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:50:26,884 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:50:26,950 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 22:50:26,951 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-23 22:50:26,954 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 22:50:28,608 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 22:50:28,627 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 22:50:28,628 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:28] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 22:50:32,522 - INFO - Received request to analyze URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:50:32,541 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 22:50:32,614 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-23 22:50:32,615 - INFO - Checking URL against Google Safe Browsing: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:50:32,617 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 22:50:32,665 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 261
+2025-01-23 22:50:32,666 - DEBUG - Google Safe Browsing response for http://testsafebrowsing.appspot.com/s/malware.html: {'matches': [{'threatType': 'MALWARE', 'platformType': 'ANY_PLATFORM', 'threat': {'url': 'http://testsafebrowsing.appspot.com/s/malware.html'}, 'cacheDuration': '300s', 'threatEntryType': 'URL'}]}
+2025-01-23 22:50:32,671 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 22:50:32,699 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-23 22:50:32,703 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 22:50:32,704 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:32] "POST /analyze_url HTTP/1.1" 200 -

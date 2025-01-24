@@ -897,6 +897,88 @@
       ]
     },
     {
+      "Route": "images/logo.4btni347wb.webp",
+      "AssetFile": "images/logo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "315384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Jan 2025 04:04:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4btni347wb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50="
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.webp"
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.webp",
+      "AssetFile": "images/logo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "315384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Jan 2025 04:04:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js.gz",
       "Selectors": [

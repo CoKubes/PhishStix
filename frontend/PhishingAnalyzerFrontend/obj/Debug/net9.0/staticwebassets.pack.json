@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\images\\logo.webp",
+      "PackagePath": "staticwebassets\\images\\logo.webp"
+    },
+    {
       "Id": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

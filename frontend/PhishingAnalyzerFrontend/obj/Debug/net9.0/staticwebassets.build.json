@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dKEOI1qyQ3+oiUQ4PeG+ki76p9L+frR9jN065/Nl/JI=",
+  "Hash": "OYBAspTn46G73T5h1DEctw6gVthESoroZ0KmPqbk0Yw=",
   "Source": "PhishingAnalyzerFrontend",
   "BasePath": "_content/PhishingAnalyzerFrontend",
   "Mode": "Default",
@@ -1443,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\images\\logo.webp",
+      "SourceId": "PhishingAnalyzerFrontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\",
+      "BasePath": "_content/PhishingAnalyzerFrontend",
+      "RelativePath": "images/logo#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4btni347wb",
+      "Integrity": "IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.webp"
     },
     {
       "Identity": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\js\\site.js",
@@ -3320,6 +3341,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.4btni347wb.webp",
+      "AssetFile": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\images\\logo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "315384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Jan 2025 04:04:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4btni347wb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.webp",
+      "AssetFile": "C:\\Users\\conne\\OneDrive\\Desktop\\PhishStix\\PhishStix\\frontend\\PhishingAnalyzerFrontend\\wwwroot\\images\\logo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "315384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Jan 2025 04:04:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IDJK41Cid0Yb6YcFSFwqt0Vf1wYYY359yoJrGG5Ne50="
         }
       ]
     },
