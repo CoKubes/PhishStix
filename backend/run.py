@@ -1,23 +1,24 @@
 # Imports
 import os
-import re
-import time
 import threading
-import requests
-import zipfile
-import io
-import schedule
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from urllib.parse import urlparse, unquote
-from Levenshtein import distance as levenshtein_distance
-import validators
-from dotenv import load_dotenv
+import time
 import logging
 from logging.handlers import RotatingFileHandler
-from bs4 import BeautifulSoup
-import tldextract
-import socket
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from dotenv import load_dotenv
+import schedule
+import validators
+from urllib.parse import unquote
+
+
+# Import utility functions
+from utils.url_checks import *
+from utils.domain_checks import *
+from utils.html_analysis import *
+
+#Import global variables
+from config import SAFE_BROWSING_API_KEY
 
 # Load environment variables
 load_dotenv()
@@ -26,6 +27,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enables cross-origin requests
 
+#logging configuration
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -35,160 +37,11 @@ logging.basicConfig(
     ]
 )
 
-SAFE_BROWSING_API_KEY = os.getenv("API_KEY")
-if not SAFE_BROWSING_API_KEY:
-    raise ValueError("API_KEY is not set. Please add it to your .env file.")
-
+# Global variables
 TRUSTED_DOMAINS = []
+TRUSTED_DOMAINS = fetch_tranco_list()
 
-# Helper Functions
-CRITICAL_DOMAINS = [
-    "google.com",
-    "paypal.com",
-    "amazon.com",
-    "microsoft.com",
-    "bankofamerica.com"
-]
-
-def is_domain_resolvable(domain):
-    try:
-        socket.gethostbyname(domain)
-        return True
-    except socket.gaierror:
-        return False
-    
-def check_domain_similarity(domain, trusted_domains):
-    for trusted in trusted_domains:
-        # Skip self-comparison
-        if domain == trusted:
-            continue
-
-        # Define a threshold for similarity (20% of the longer domain's length)
-        max_distance = max(len(domain), len(trusted)) * 0.2
-        if levenshtein_distance(domain, trusted) <= max_distance:
-            return trusted  # Return the similar trusted domain
-    return None
-
-def fetch_tranco_list():
-    try:
-        url = "https://tranco-list.eu/top-1m.csv.zip"
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-
-        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
-            with z.open("top-1m.csv") as f:
-                domains = [line.decode("utf-8").split(",")[1].strip() for line in f.readlines()[1:]]
-        
-        combined_domains = list(set(domains[:1000] + CRITICAL_DOMAINS))
-        return combined_domains
-    except requests.RequestException as e:
-        print(f"Error fetching Tranco list: {e}")
-        return CRITICAL_DOMAINS
-
-def check_google_safe_browsing(url):
-    logging.info(f"Checking URL against Google Safe Browsing: {url}")
-    payload = {
-        "client": {
-            "clientId": "phishing_analyzer",
-            "clientVersion": "1.0.0"
-        },
-        "threatInfo": {
-            "threatTypes": ["MALWARE", "SOCIAL_ENGINEERING"],
-            "platformTypes": ["ANY_PLATFORM"],
-            "threatEntryTypes": ["URL"],
-            "threatEntries": [{"url": url}]
-        }
-    }
-    try:
-        response = requests.post(
-            f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={SAFE_BROWSING_API_KEY}",
-            json=payload
-        )
-        data = response.json()
-        logging.debug(f"Google Safe Browsing response for {url}: {data}")
-        return "matches" in data
-    except requests.RequestException as e:
-        logging.error(f"Error contacting Google Safe Browsing API for {url}: {e}")
-        return False
-
-def analyze_redirect_chain(url):
-    try:
-        response = requests.get(url, timeout=10, allow_redirects=True)
-        chain = [resp.url for resp in response.history]
-        chain.append(response.url)
-        return {
-            "is_suspicious": len(chain) > 5,
-            "reason": "Excessive redirects detected." if len(chain) > 5 else "Redirect chain looks normal.",
-            "chain": chain,
-            "final_url": response.url
-        }
-    except requests.exceptions.ConnectionError:
-        return {
-            "is_suspicious": True,
-            "reason": "Domain cannot be resolved or connection failed.",
-            "chain": []
-        }
-    except requests.RequestException as e:
-        return {
-            "is_suspicious": True,
-            "reason": f"Error during redirect analysis: {e}",
-            "chain": []
-        }
-
-def get_base_domain(domain):
-    ext = tldextract.extract(domain)
-    return f"{ext.domain}.{ext.suffix}"
-
-def analyze_links(soup, current_domain):
-    analysis_results = []
-    links = soup.find_all('a', href=True)
-
-    for link in links:
-        link_text = link.text.strip().lower()
-        href = link['href'].strip().lower()
-
-        if not link_text or not href:
-            continue
-
-        if href.startswith('#') or any(phrase in link_text for phrase in [
-            "privacy policy", "terms of use", "accessibility", "skip to content"
-        ]):
-            continue
-
-        parsed_href = urlparse(href)
-        href_domain = parsed_href.netloc
-        current_base_domain = get_base_domain(current_domain)
-        href_base_domain = get_base_domain(href_domain)
-
-        if href_domain and href_base_domain != current_base_domain and link_text in current_base_domain:
-            analysis_results.append(f"Suspicious link: text '{link_text}' points to unrelated domain '{href_domain}'.")
-        
-        if re.search(r"%[0-9A-Fa-f]{2}", href) or re.match(r"(\d{1,3}\.){3}\d{1,3}", href_domain):
-            analysis_results.append(f"Obfuscated or suspicious link: '{href}'.")
-
-    return analysis_results
-
-def analyze_html_content(url):
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, 'lxml')
-        analysis_results = []
-
-        current_domain = urlparse(url).netloc
-
-        link_issues = analyze_links(soup, current_domain)
-        analysis_results.extend(link_issues)
-
-        return analysis_results
-    except requests.RequestException as e:
-        logging.error(f"Error fetching HTML content for {url}: {e}")
-        return [f"Error fetching HTML content: {str(e)}"]
-    except Exception as e:
-        logging.error(f"Error analyzing HTML content for {url}: {e}")
-        return [f"Error analyzing HTML content: {str(e)}"]
-
+# Scheduler setup
 def update_trusted_domains():
     global TRUSTED_DOMAINS
     TRUSTED_DOMAINS = fetch_tranco_list()
@@ -203,8 +56,6 @@ def run_scheduler():
 
 scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
 scheduler_thread.start()
-
-TRUSTED_DOMAINS = fetch_tranco_list()
 
 @app.route('/analyze_url', methods=['POST'])
 def analyze_url():

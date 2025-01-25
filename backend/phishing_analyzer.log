@@ -766,3 +766,140 @@
 2025-01-23 22:50:32,699 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
 2025-01-23 22:50:32,703 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
 2025-01-23 22:50:32,704 - INFO - 127.0.0.1 - - [23/Jan/2025 22:50:32] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 23:23:20,919 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 23:23:21,328 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 23:23:21,362 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 23:23:22,470 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 23:23:22,471 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 23:23:22,473 - INFO -  * Restarting with stat
+2025-01-23 23:23:22,909 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-23 23:23:23,143 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-23 23:23:23,172 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739830
+2025-01-23 23:23:24,256 - WARNING -  * Debugger is active!
+2025-01-23 23:23:24,260 - INFO -  * Debugger PIN: 109-864-221
+2025-01-23 23:23:35,689 - INFO - Received request to analyze URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 23:23:35,707 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 23:23:36,022 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 23:23:36,141 - INFO - Checking URL against Google Safe Browsing: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 23:23:36,143 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 23:23:36,237 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 23:23:36,238 - DEBUG - Google Safe Browsing response for https://amazon.jobs/content/en/our-workplace/leadership-principles: {}
+2025-01-23 23:23:36,241 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-23 23:23:36,488 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-23 23:23:36,662 - DEBUG - Attempting to acquire lock 1757524058016 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 23:23:36,663 - DEBUG - Lock 1757524058016 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 23:23:36,679 - DEBUG - Attempting to release lock 1757524058016 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 23:23:36,680 - DEBUG - Lock 1757524058016 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-23 23:23:36,719 - INFO - Analysis completed for URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-23 23:23:36,720 - INFO - 127.0.0.1 - - [23/Jan/2025 23:23:36] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 23:23:42,109 - INFO - Received request to analyze URL: http://example.com/login
+2025-01-23 23:23:42,127 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 23:23:42,426 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 23:23:42,427 - INFO - Checking URL against Google Safe Browsing: http://example.com/login
+2025-01-23 23:23:42,429 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 23:23:42,475 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 23:23:42,477 - DEBUG - Google Safe Browsing response for http://example.com/login: {}
+2025-01-23 23:23:42,479 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-23 23:23:42,563 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-23 23:23:42,564 - ERROR - Error fetching HTML content for http://example.com/login: 404 Client Error: Not Found for url: http://example.com/login
+2025-01-23 23:23:42,565 - INFO - Analysis completed for URL: http://example.com/login
+2025-01-23 23:23:42,565 - INFO - 127.0.0.1 - - [23/Jan/2025 23:23:42] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 23:23:46,858 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 23:23:46,875 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 23:23:48,383 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 23:23:48,384 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 23:23:48,388 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 23:23:48,438 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-23 23:23:48,439 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-23 23:23:48,443 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-23 23:23:49,824 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-23 23:23:49,858 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-23 23:23:49,860 - INFO - 127.0.0.1 - - [23/Jan/2025 23:23:49] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 23:23:53,327 - INFO - Received request to analyze URL: http://g00gle.com
+2025-01-23 23:23:53,437 - INFO - 127.0.0.1 - - [23/Jan/2025 23:23:53] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-23 23:23:59,513 - INFO - Received request to analyze URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 23:23:59,535 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 23:23:59,603 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-23 23:23:59,604 - INFO - Checking URL against Google Safe Browsing: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 23:23:59,606 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-23 23:23:59,651 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 261
+2025-01-23 23:23:59,652 - DEBUG - Google Safe Browsing response for http://testsafebrowsing.appspot.com/s/malware.html: {'matches': [{'threatType': 'MALWARE', 'platformType': 'ANY_PLATFORM', 'threat': {'url': 'http://testsafebrowsing.appspot.com/s/malware.html'}, 'cacheDuration': '300s', 'threatEntryType': 'URL'}]}
+2025-01-23 23:23:59,655 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-23 23:23:59,693 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-23 23:23:59,695 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-23 23:23:59,696 - INFO - 127.0.0.1 - - [23/Jan/2025 23:23:59] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 20:57:57,217 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-24 20:57:58,168 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-24 20:57:58,520 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739868
+2025-01-24 20:57:59,629 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 20:57:59,629 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 20:57:59,632 - INFO -  * Restarting with stat
+2025-01-24 20:58:00,058 - DEBUG - Starting new HTTPS connection (1): tranco-list.eu:443
+2025-01-24 20:58:00,268 - DEBUG - https://tranco-list.eu:443 "GET /top-1m.csv.zip HTTP/1.1" 307 23
+2025-01-24 20:58:00,301 - DEBUG - https://tranco-list.eu:443 "GET /download/daily/top-1m.csv.zip HTTP/1.1" 200 9739868
+2025-01-24 20:58:01,464 - WARNING -  * Debugger is active!
+2025-01-24 20:58:01,467 - INFO -  * Debugger PIN: 109-864-221
+2025-01-24 21:01:34,611 - INFO - Received request to analyze URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-24 21:01:34,670 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-24 21:01:34,943 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-24 21:01:35,177 - INFO - Checking URL against Google Safe Browsing: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-24 21:01:35,178 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-24 21:01:35,247 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-24 21:01:35,248 - DEBUG - Google Safe Browsing response for https://amazon.jobs/content/en/our-workplace/leadership-principles: {}
+2025-01-24 21:01:35,250 - DEBUG - Starting new HTTPS connection (1): amazon.jobs:443
+2025-01-24 21:01:35,466 - DEBUG - https://amazon.jobs:443 "GET /content/en/our-workplace/leadership-principles HTTP/1.1" 200 None
+2025-01-24 21:01:35,571 - DEBUG - Attempting to acquire lock 1647011918752 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-24 21:01:35,572 - DEBUG - Lock 1647011918752 acquired on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-24 21:01:35,584 - DEBUG - Attempting to release lock 1647011918752 on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-24 21:01:35,585 - DEBUG - Lock 1647011918752 released on C:\Users\conne\.cache\python-tldextract\3.9.12.final__venv__725f14__tldextract-5.1.3\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-01-24 21:01:35,608 - INFO - Analysis completed for URL: https://amazon.jobs/content/en/our-workplace/leadership-principles
+2025-01-24 21:01:35,609 - INFO - 127.0.0.1 - - [24/Jan/2025 21:01:35] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 21:04:15,535 - INFO - Received request to analyze URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-24 21:04:15,560 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-24 21:04:15,651 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-24 21:04:15,652 - INFO - Checking URL against Google Safe Browsing: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-24 21:04:15,654 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-24 21:04:15,705 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 261
+2025-01-24 21:04:15,706 - DEBUG - Google Safe Browsing response for http://testsafebrowsing.appspot.com/s/malware.html: {'matches': [{'threatType': 'MALWARE', 'platformType': 'ANY_PLATFORM', 'threat': {'url': 'http://testsafebrowsing.appspot.com/s/malware.html'}, 'cacheDuration': '300s', 'threatEntryType': 'URL'}]}
+2025-01-24 21:04:15,708 - DEBUG - Starting new HTTP connection (1): testsafebrowsing.appspot.com:80
+2025-01-24 21:04:15,753 - DEBUG - http://testsafebrowsing.appspot.com:80 "GET /s/malware.html HTTP/1.1" 200 173
+2025-01-24 21:04:15,755 - INFO - Analysis completed for URL: http://testsafebrowsing.appspot.com/s/malware.html
+2025-01-24 21:04:15,756 - INFO - 127.0.0.1 - - [24/Jan/2025 21:04:15] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 21:04:20,729 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:04:20,769 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-24 21:04:21,994 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-24 21:04:21,996 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:04:21,998 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-24 21:04:22,060 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-24 21:04:22,063 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-24 21:04:22,066 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-24 21:04:23,368 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-24 21:04:23,386 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:04:23,387 - INFO - 127.0.0.1 - - [24/Jan/2025 21:04:23] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 21:05:01,006 - INFO - Received request to analyze URL: http://g00gle.com
+2025-01-24 21:05:01,058 - INFO - 127.0.0.1 - - [24/Jan/2025 21:05:01] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 21:05:13,013 - INFO - Received request to analyze URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:05:13,016 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-24 21:05:14,280 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-24 21:05:14,284 - INFO - Checking URL against Google Safe Browsing: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:05:14,288 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-24 21:05:14,347 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-24 21:05:14,348 - DEBUG - Google Safe Browsing response for https://ibmglobal.avature.net/en_US/careers?jobId=6108: {}
+2025-01-24 21:05:14,351 - DEBUG - Starting new HTTPS connection (1): ibmglobal.avature.net:443
+2025-01-24 21:05:15,654 - DEBUG - https://ibmglobal.avature.net:443 "GET /en_US/careers?jobId=6108 HTTP/1.1" 200 None
+2025-01-24 21:05:15,690 - INFO - Analysis completed for URL: https://ibmglobal.avature.net/en_US/careers?jobId=6108
+2025-01-24 21:05:15,691 - INFO - 127.0.0.1 - - [24/Jan/2025 21:05:15] "POST /analyze_url HTTP/1.1" 200 -
+2025-01-24 21:05:28,776 - INFO - Received request to analyze URL: http://example.com/login
+2025-01-24 21:05:28,788 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-24 21:05:29,222 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-24 21:05:29,223 - INFO - Checking URL against Google Safe Browsing: http://example.com/login
+2025-01-24 21:05:29,225 - DEBUG - Starting new HTTPS connection (1): safebrowsing.googleapis.com:443
+2025-01-24 21:05:29,271 - DEBUG - https://safebrowsing.googleapis.com:443 "POST /v4/threatMatches:find?key=AIzaSyCISF0aUZRzWEni1VkqlwJfOGbi2ejqA8Y HTTP/1.1" 200 3
+2025-01-24 21:05:29,272 - DEBUG - Google Safe Browsing response for http://example.com/login: {}
+2025-01-24 21:05:29,275 - DEBUG - Starting new HTTP connection (1): example.com:80
+2025-01-24 21:05:29,362 - DEBUG - http://example.com:80 "GET /login HTTP/1.1" 404 1256
+2025-01-24 21:05:29,363 - ERROR - Error fetching HTML content for http://example.com/login: 404 Client Error: Not Found for url: http://example.com/login
+2025-01-24 21:05:29,364 - INFO - Analysis completed for URL: http://example.com/login
+2025-01-24 21:05:29,365 - INFO - 127.0.0.1 - - [24/Jan/2025 21:05:29] "POST /analyze_url HTTP/1.1" 200 -
