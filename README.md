@@ -1,5 +1,5 @@
 # PhishStix
-PhishStix is an interactive tool designed to analyze URLs for potential phishing risks. By combining various detection techniques, including keyword analysis, redirect chain evaluation, HTML content examination, and domain reputation checks, PhishStix provides users with a comprehensive risk score and detailed reasoning for each analyzed URL.
+Not yet deployed. PhishStix is an interactive tool designed to analyze URLs for potential phishing risks. By combining various detection techniques, including keyword analysis, redirect chain evaluation, HTML content examination, and domain reputation checks, PhishStix provides users with a comprehensive risk score and detailed reasoning for each analyzed URL.
 
 ## TODO:
 I still have some bugs to fix and want to add many more features to add. I will put specific TODOs in the subfolders. 
